@@ -16,6 +16,9 @@ button{
     outline:none;
     cursor: pointer; 
 }
+select,textarea,input{
+    outline: none;
+}
 .fixed{
     position: fixed;
 }
