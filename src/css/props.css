@@ -25,9 +25,15 @@ select,textarea,input{
 .flex{
     display: flex;
 }
+.ibl{display: inline-block;}
 .abs{position: absolute;}
 .rel{position: relative;}
 .aic{align-items: center;}
+.abc{
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%)
+}
 .jic{justify-content: center;}
 .bl{
     display: block;
@@ -40,6 +46,7 @@ select,textarea,input{
 .c777{color: #777}
 .s13{font-size:13px}
 .s15{font-size:15px}
+.s18{font-size:18px}
 .s20{font-size:20px}
 .s24{font-size: 24px;}
 .fontb{font-weight: bold;}

@@ -1,5 +1,6 @@
 import React,{ useState} from "react";
 import logo from "../ui/logo-coral.svg"
+import {NavLink} from "react-router-dom"
 
 
 function Sidebar(){
@@ -8,7 +9,7 @@ function Sidebar(){
         {label:"Home",slug:"/", icon: "icon-home"},
         {label:"Discover",slug:"discover",icon:"icon-location"},
         {label:"Categories",slug:"categories",icon:"icon-drawer"},
-        {label:"My Courses",slug:"my corses",icon:"icon-briefcase"}
+        {label:"My Courses",slug:"mycourses",icon:"icon-briefcase"}
     ])
 
     const [currentPge, setCurrentPage] = useState("/");
@@ -17,13 +18,14 @@ function Sidebar(){
     for(let i=0;i < nav.length;i++){
         navigation.push(
             <li key={"nav-"+i+"-"+nav[i].slug}>
-                    <a href={nav[i].slug}  className= {"aic link noul flex c333" + (currentPge === nav[i].slug ? " on":"")} >
+                    <NavLink to={nav[i].slug}  className= {"aic link noul flex c333" + (currentPge === nav[i].slug ? " on":"")} >
                         <div className= {"ico s20 " + nav[i].icon} />
                         <h2 className="lbl s20">{nav[i].label}</h2>
-                    </a>
+                    </NavLink>
                 </li>
         );
     }
+    console.log(global.fire)
 
     return(
         <div className='sidebar rel'>
@@ -65,7 +67,7 @@ function Sidebar(){
                 </div>
 
                 <div className="me flex aic">
-                    <div className="photo cfff s24" >
+                    {global.fire.ID ? <React.Fragment><div className="photo cfff s24" >
                         <img src="https://placeimg.com/100/100/people" className="bl"></img>
                         </div>
 
@@ -75,8 +77,14 @@ function Sidebar(){
                             
 
                     </div>
+                    </React.Fragment>
+                    :
+                    <NavLink to={"oauth"}  className= "aic link noul flex c333">
+                        <div className= {"ico s20 icon-user"} />
+                        <h2 className="lbl s20">Sing In</h2>
+                    </NavLink>
+                    }
                     </div>
-        
         
 
         
