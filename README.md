@@ -1,7 +1,7 @@
 # Udemy Clone with React
 
 > This is a UI representation of Udemy.com
-I tried to create this UI for learning purposes and I did learn a lot like CSS and fundementals on React
+>I tried to create this UI for learning purposes and I did learn a lot like CSS and fundementals on React
 
 
 
